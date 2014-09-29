@@ -1,10 +1,15 @@
-<h1><a href="/">Pixtr says Hi</a></h1>
+<a href="/galleries/new">Create a new gallery</a>
 
-<a href="/galleries/new">Make a new gallery</a>
-
-<ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
   <% @galleries.each do |gallery| %>
-    <li><a href="/galleries/<%= gallery.id %>"><%= gallery.name %></a> - <%= gallery.description %></li>
+    <tr>
+      <td><%= gallery.name %></td>
+      <td><%= gallery.description %></td>
+      <td><a href="/galleries/<%= gallery.id %>">Show</a></td>
+    </tr>
   <% end %>
-</ul>
-
+</table>

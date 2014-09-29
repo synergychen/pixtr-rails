@@ -1,4 +1,7 @@
 class GalleriesController < ApplicationController
+
+  layout "application"
+
   def index
     @galleries = Gallery.all
   end
