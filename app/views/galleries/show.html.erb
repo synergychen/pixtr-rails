@@ -1,14 +1,16 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><%= @gallery.name %></td>
-    <td><%= @gallery.description %></td>
-  </tr>
-</table>
+<h3>Show Gallery "<%= @gallery.name %>"</h3>
 
-<hr />
-
-<a href="/galleries/<%= @gallery.id %>/edit">Edit</a>
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><%= @gallery.name %></td>
+      <td><%= @gallery.description %></td>
+      <td><a href="/galleries/<%= @gallery.id %>/edit">Edit</a>
+      <td><a href="/galleries/<%= @gallery.id %>/delete">Delete</a>
+    </tr>
+  </table>
+</div>
