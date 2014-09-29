@@ -1,5 +1,3 @@
-<a href="/galleries/new">Create a new gallery</a>
-
 <table>
   <tr>
     <th>Name</th>
@@ -10,6 +8,11 @@
       <td><%= gallery.name %></td>
       <td><%= gallery.description %></td>
       <td><a href="/galleries/<%= gallery.id %>">Show</a></td>
+      <td><a href="/galleries/<%= gallery.id %>/edit">Edit</a></td>
     </tr>
   <% end %>
 </table>
+
+<hr />
+
+<a href="/galleries/new">Create a new gallery</a>
