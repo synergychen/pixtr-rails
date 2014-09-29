@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get "/galleries/:id/delete" => "galleries#delete"
   patch "/galleries/:id/destroy" => "galleries#destroy"
+  # delete "/galleries/:id/destroy" => "galleries#destroy"
 end

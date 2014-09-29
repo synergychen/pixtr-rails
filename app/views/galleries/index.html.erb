@@ -1,3 +1,4 @@
+<h3>Viewing Gallery Table :</h3>
 <table>
   <tr>
     <th>Name</th>
@@ -7,9 +8,9 @@
     <tr>
       <td><%= gallery.name %></td>
       <td><%= gallery.description %></td>
-      <td><a href="/galleries/<%= gallery.id %>">Show</a></td>
-      <td><a href="/galleries/<%= gallery.id %>/edit">Edit</a></td>
-      <td><a href="/galleries/<%= gallery.id %>/delete">Delete</a></td>
+      <td><%= link_to "Show", "/galleries/#{gallery.id}" %></td>
+      <td><%= link_to "Edit", "/galleries/#{gallery.id}/edit" %></td>
+      <td><%= link_to "Delete", "/galleries/#{gallery.id}/delete" %></td>
     </tr>
   <% end %>
 </table>

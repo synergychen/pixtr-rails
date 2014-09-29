@@ -27,8 +27,8 @@ class GalleriesController < ApplicationController
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
-    @gallery.update(
+    gallery = Gallery.find(params[:id])
+    gallery.update(
       name: params[:gallery][:name],
       description: params[:gallery][:description]
     )
