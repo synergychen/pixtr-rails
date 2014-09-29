@@ -1,0 +1,19 @@
+<h3>Edit Gallery "<%= @gallery.name %>"</h3>
+
+<div>
+  <%= form_for @gallery, url: {action: "update" } do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+
+    <div>
+      <%= form.submit "Update Gallery" %>
+    </div>
+  <% end %>
+</div>
