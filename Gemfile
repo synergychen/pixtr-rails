@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# pry for development, group development means only accessiable in development
+gem 'pry', group: :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

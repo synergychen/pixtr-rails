@@ -11,10 +11,11 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    Gallery.create(
-      name: params[:gallery][:name],
-      description: params[:gallery][:description]
-    )
+    Gallery.create(params[:gallery])
+    # Gallery.create(
+    #   name: params[:gallery][:name],
+    #   description: params[:gallery][:description]
+    # )
     redirect_to "/"
   end
 
