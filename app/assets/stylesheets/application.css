@@ -19,9 +19,14 @@
 }
 
 table, th, td {
-  margin:0px;padding:0px;
-  width:0%;
-  border:1px solid #000000;
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+  border: 1px solid #000000;
   box-shadow: 1px 1px 1px #888888;
   text-align: center;
+}
+
+.gallery_images img {
+  max-width: 100%;
 }
