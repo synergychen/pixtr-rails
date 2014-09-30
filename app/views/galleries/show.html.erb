@@ -1,16 +1,16 @@
-<h3>Show Gallery "<%= @gallery.name %>"</h3>
+<h3>Show All Images in "<%= @gallery.name %>"</h3>
 
-<div>
-  <table>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Gallery ID</th>
+  </tr>
+  <% @gallery.images.each do |image| %>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <td><%= link_to image.name, "/galleries/#{@gallery.id}/images/#{image.id}" %></td>
+      <td><%= link_to "View Image", image.url %></td>
+      <td><%= image.gallery_id %></td>
     </tr>
-    <tr>
-      <td><%= @gallery.name %></td>
-      <td><%= @gallery.description %></td>
-      <td><a href="/galleries/<%= @gallery.id %>/edit">Edit</a>
-      <td><a href="/galleries/<%= @gallery.id %>/delete">Delete</a>
-    </tr>
-  </table>
-</div>
+  <% end %>
+</table>

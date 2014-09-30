@@ -1,0 +1,16 @@
+<h3>Show Image "<%= @image.name %>"</h3>
+
+<p>Click <%= link_to "here", @image.url %> to view image source</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Gallery ID</th>
+  </tr>
+    <tr>
+      <td><%= @image.name %></td>
+      <td><%= image_tag @image.url %></td>
+      <td><%= @image.gallery_id %></td>
+    </tr>
+</table>
