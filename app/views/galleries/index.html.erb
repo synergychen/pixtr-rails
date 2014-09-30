@@ -8,9 +8,13 @@
     <tr>
       <td><%= gallery.name %></td>
       <td><%= gallery.description %></td>
-      <td><%= link_to "Show", "/galleries/#{gallery.id}" %></td>
-      <td><%= link_to "Edit", "/galleries/#{gallery.id}/edit" %></td>
-      <td><%= link_to "Delete", "/galleries/#{gallery.id}/delete" %></td>
+      <td><%= link_to "Show", gallery_path(gallery) %></td>
+      <td><%= link_to "Edit", edit_gallery_path(gallery) %></td>
+      <td>
+        <%= form_for gallery, method: :delete do |form| %>
+          <%= form.submit "Delete Gallery" %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

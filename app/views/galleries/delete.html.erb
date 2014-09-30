@@ -1,7 +1,7 @@
 <p>Are you sure to delete "<%= @gallery.name %>"?</p>
 
 <div>
-  <%= form_for @gallery, url: {action: "destroy"} do |form| %>
+  <%= form_for @gallery, html: {action: "destroy"} do |form| %>
     <%= form.submit "Delete Gallery" %>
   <% end %>
 </div>

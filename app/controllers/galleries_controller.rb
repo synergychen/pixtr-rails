@@ -11,13 +11,9 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    # mass assignment
-    Gallery.create(gallery_params)
-    # Gallery.create(
-    #   name: params[:gallery][:name],
-    #   description: params[:gallery][:description]
-    # )
-    redirect_to "/"
+    gallery = Gallery.create(gallery_params)
+    # redirect_to gallery_path(gallery)
+    redirect_to gallery
   end
 
   def show
@@ -31,11 +27,8 @@ class GalleriesController < ApplicationController
   def update
     gallery = Gallery.find(params[:id])
     gallery.update(gallery_params)
-    redirect_to "/galleries/#{params[:id]}"
-  end
-
-  def delete
-    @gallery = Gallery.find(params[:id])
+    # redirect_to "/galleries/#{params[:id]}"
+    redirect_to gallery
   end
 
   def destroy
