@@ -9,13 +9,22 @@
   <body>
 
     <div class="header">
-      <div class="container">
-        <h1><a class="header" href="/">Pixtr</a></h1>
+      <div class="header-container">
+        <span class="header-logo"><%= image_tag "logo.jpg" %></span>
+        <h1><a class="header-name" href="/">Pixtr</a></h1>
       </div>
     </div>
 
-    <div class="main">
-      <%= yield %>
+    <div class="body">
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="footer">
+        <p class="copyright">&copy; synergychen.com / Chen Huang</p>
+      </div>
+
     </div>
 
   </body>

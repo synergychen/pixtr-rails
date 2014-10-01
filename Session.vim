@@ -26,16 +26,16 @@ nnoremap <NL> j
 nnoremap  k
 nnoremap  l
 nnoremap <silent>  :CtrlP
-nmap  <Plug>TComment-
-nmap 1 <Plug>TComment-1
-nmap 2 <Plug>TComment-2
-nmap 3 <Plug>TComment-3
-nmap 4 <Plug>TComment-4
-nmap 5 <Plug>TComment-5
-nmap 6 <Plug>TComment-6
-nmap 7 <Plug>TComment-7
-nmap 8 <Plug>TComment-8
 nmap 9 <Plug>TComment-9
+nmap 8 <Plug>TComment-8
+nmap 7 <Plug>TComment-7
+nmap 6 <Plug>TComment-6
+nmap 5 <Plug>TComment-5
+nmap 4 <Plug>TComment-4
+nmap 3 <Plug>TComment-3
+nmap 2 <Plug>TComment-2
+nmap 1 <Plug>TComment-1
+nmap  <Plug>TComment-
 vmap 9 <Plug>TComment-9
 omap 9 <Plug>TComment-9
 vmap 8 <Plug>TComment-8
@@ -66,8 +66,8 @@ map   <Plug>TComment-
 map p <Plug>TComment-p
 vmap  <Plug>TComment-
 omap  <Plug>TComment-
-smap  __ <Plug>TComment- __
 nmap  __ <Plug>TComment- __
+smap  __ <Plug>TComment- __
 map  _s <Plug>TComment- _s
 map  _n <Plug>TComment- _n
 map  _a <Plug>TComment- _a
@@ -120,18 +120,18 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-nnoremap <Plug>TComment- :TComment
-snoremap <Plug>TComment- __ :TComment
-nnoremap <Plug>TComment- __ :TComment
-nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
 nnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment- __ :TComment
+snoremap <Plug>TComment- __ :TComment
+nnoremap <Plug>TComment- :TComment
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 nnoremap <silent> <Plug>TComment-gc9c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 9) | set opfunc=tcomment#Operatorg@
 nnoremap <silent> <Plug>TComment-gc8c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 8) | set opfunc=tcomment#Operatorg@
@@ -260,7 +260,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +5 app/controllers/images_controller.rb
+badd +9 app/controllers/images_controller.rb
 badd +18 app/views/images/show.html.erb
 badd +1 app/views/layouts/admin.html.erb
 badd +13 app/assets/stylesheets/application.css
@@ -268,10 +268,10 @@ badd +6 app/views/galleries/show.html.erb
 badd +6 app/controllers/galleries_controller.rb
 badd +23 app/views/galleries/index.html.erb
 badd +6 config/routes.rb
-badd +0 app/assets/stylesheets/admin.css
+badd +1 app/assets/stylesheets/admin.css
 badd +1 app/views/layouts/application.html.erb
 silent! argdel *
-edit app/controllers/images_controller.rb
+edit app/views/layouts/admin.html.erb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -291,13 +291,15 @@ exe 'vert 3resize ' . ((&columns * 71 + 71) / 143)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>73_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>62_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> gf <Plug>RailsFind
+imap <buffer>  <Plug>SparkupExecute
+imap <buffer>  <Plug>SparkupNext
 let &cpo=s:cpo_save
 unlet s:cpo_save
-setlocal noautoindent
+setlocal autoindent
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -309,7 +311,7 @@ setlocal cinwords=if,else,while,do,for,switch
 set colorcolumn=+1
 setlocal colorcolumn=+1
 setlocal comments=:#
-setlocal commentstring=#\ %s
+setlocal commentstring=<%#%s%>
 setlocal complete=.,w,b,u,t,i
 setlocal completefunc=
 setlocal nocopyindent
@@ -317,14 +319,14 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 setlocal nocursorline
-setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
+setlocal define=
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'ruby'
-setlocal filetype=ruby
+if &filetype != 'eruby'
+setlocal filetype=eruby
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -344,8 +346,8 @@ setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
 setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetRubyIndent(v:lnum)
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,:,.,=end,=else,=elsif,=when,=ensure,=rescue,==begin,==end,=private,=protected,=public
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=ri
@@ -354,7 +356,7 @@ setlocal nolisp
 set list
 setlocal list
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=octal,hex
@@ -363,7 +365,7 @@ setlocal number
 set numberwidth=5
 setlocal numberwidth=5
 setlocal omnifunc=rubycomplete#Complete
-setlocal path=~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/images,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/
+setlocal path=~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/admin,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/v
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -382,8 +384,8 @@ setlocal statusline=
 setlocal suffixesadd=.rb
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'ruby'
-setlocal syntax=ruby
+if &syntax != 'eruby'
+setlocal syntax=eruby
 endif
 setlocal tabstop=2
 setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/ta
@@ -395,20 +397,21 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((2 * winheight(0) + 9) / 18)
+let s:l = 26 - ((17 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 0
+26
+normal! 06l
 lcd ~/Desktop/ROR/rails-app/pixtr
 wincmd w
 argglobal
 edit ~/Desktop/ROR/rails-app/pixtr/app/views/galleries/index.html.erb
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>61_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>73_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>61_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>62_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> gf <Plug>RailsFind
@@ -514,12 +517,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 9) / 18)
+let s:l = 24 - ((17 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
-normal! 02l
+24
+normal! 0
 lcd ~/Desktop/ROR/rails-app/pixtr
 wincmd w
 argglobal
@@ -629,11 +632,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 18) / 37)
+let s:l = 18 - ((13 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
+18
 normal! 0
 lcd ~/Desktop/ROR/rails-app/pixtr
 wincmd w
