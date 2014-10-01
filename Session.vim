@@ -26,33 +26,32 @@ nnoremap <NL> j
 nnoremap  k
 nnoremap  l
 nnoremap <silent>  :CtrlP
-nmap 9 <Plug>TComment-9
-nmap 8 <Plug>TComment-8
-nmap 7 <Plug>TComment-7
-nmap 6 <Plug>TComment-6
-nmap 5 <Plug>TComment-5
-nmap 4 <Plug>TComment-4
-nmap 3 <Plug>TComment-3
-nmap 2 <Plug>TComment-2
-nmap 1 <Plug>TComment-1
-nmap  <Plug>TComment-
 vmap 9 <Plug>TComment-9
+nmap 9 <Plug>TComment-9
 omap 9 <Plug>TComment-9
 vmap 8 <Plug>TComment-8
+nmap 8 <Plug>TComment-8
 omap 8 <Plug>TComment-8
 vmap 7 <Plug>TComment-7
+nmap 7 <Plug>TComment-7
 omap 7 <Plug>TComment-7
 vmap 6 <Plug>TComment-6
+nmap 6 <Plug>TComment-6
 omap 6 <Plug>TComment-6
 vmap 5 <Plug>TComment-5
+nmap 5 <Plug>TComment-5
 omap 5 <Plug>TComment-5
 vmap 4 <Plug>TComment-4
+nmap 4 <Plug>TComment-4
 omap 4 <Plug>TComment-4
 vmap 3 <Plug>TComment-3
+nmap 3 <Plug>TComment-3
 omap 3 <Plug>TComment-3
 vmap 2 <Plug>TComment-2
+nmap 2 <Plug>TComment-2
 omap 2 <Plug>TComment-2
 vmap 1 <Plug>TComment-1
+nmap 1 <Plug>TComment-1
 omap 1 <Plug>TComment-1
 map ca <Plug>TComment-ca
 map cc <Plug>TComment-cc
@@ -65,9 +64,8 @@ map r <Plug>TComment-r
 map   <Plug>TComment- 
 map p <Plug>TComment-p
 vmap  <Plug>TComment-
+nmap  <Plug>TComment-
 omap  <Plug>TComment-
-nmap  __ <Plug>TComment- __
-smap  __ <Plug>TComment- __
 map  _s <Plug>TComment- _s
 map  _n <Plug>TComment- _n
 map  _a <Plug>TComment- _a
@@ -77,6 +75,8 @@ xmap  _i <Plug>TComment- _i
 map  _  <Plug>TComment- _ 
 map  _p <Plug>TComment- _p
 xmap  __ <Plug>TComment- __
+nmap  __ <Plug>TComment- __
+smap  __ <Plug>TComment- __
 omap  __ <Plug>TComment- __
 nnoremap  r :RunInInteractiveShell 
 nnoremap  l :call RunLastSpec()
@@ -120,18 +120,6 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-nnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
-nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment- __ :TComment
-snoremap <Plug>TComment- __ :TComment
-nnoremap <Plug>TComment- :TComment
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 nnoremap <silent> <Plug>TComment-gc9c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 9) | set opfunc=tcomment#Operatorg@
 nnoremap <silent> <Plug>TComment-gc8c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 8) | set opfunc=tcomment#Operatorg@
@@ -143,22 +131,31 @@ nnoremap <silent> <Plug>TComment-gc3c :let w:tcommentPos = getpos(".") | call t
 nnoremap <silent> <Plug>TComment-gc2c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 2) | set opfunc=tcomment#Operatorg@
 nnoremap <silent> <Plug>TComment-gc1c :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 1) | set opfunc=tcomment#Operatorg@
 vnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
 onoremap <Plug>TComment-9 :call tcomment#SetOption("count", 9)
 vnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
 onoremap <Plug>TComment-8 :call tcomment#SetOption("count", 8)
 vnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
 onoremap <Plug>TComment-7 :call tcomment#SetOption("count", 7)
 vnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
 onoremap <Plug>TComment-6 :call tcomment#SetOption("count", 6)
 vnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
 onoremap <Plug>TComment-5 :call tcomment#SetOption("count", 5)
 vnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
 onoremap <Plug>TComment-4 :call tcomment#SetOption("count", 4)
 vnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
 onoremap <Plug>TComment-3 :call tcomment#SetOption("count", 3)
 vnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
 onoremap <Plug>TComment-2 :call tcomment#SetOption("count", 2)
 vnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
 onoremap <Plug>TComment-1 :call tcomment#SetOption("count", 1)
 nnoremap <silent> <Plug>TComment-gc :if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") | set opfunc=tcomment#Operatorg@
 xnoremap <Plug>TComment-gc :TCommentMaybeInline
@@ -182,6 +179,8 @@ xnoremap <Plug>TComment- _i :TCommentInline
 noremap <Plug>TComment- _  :TComment 
 noremap <Plug>TComment- _p vip:TComment
 xnoremap <Plug>TComment- __ :TCommentMaybeInline
+nnoremap <Plug>TComment- __ :TComment
+snoremap <Plug>TComment- __ :TComment
 onoremap <Plug>TComment- __ :TComment
 noremap <Plug>TComment-ca :call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#Complete"))
 noremap <Plug>TComment-cc :call tcomment#SetOption("count", v:count1)
@@ -194,6 +193,7 @@ noremap <Plug>TComment-r :TCommentRight
 noremap <Plug>TComment-  :TComment 
 noremap <Plug>TComment-p m`vip:TComment``
 vnoremap <Plug>TComment- :TCommentMaybeInline
+nnoremap <Plug>TComment- :TComment
 onoremap <Plug>TComment- :TComment
 nnoremap <silent> <Plug>SurroundRepeat .
 nnoremap <Down> :echoe "Use j"
@@ -260,18 +260,25 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +9 app/controllers/images_controller.rb
-badd +18 app/views/images/show.html.erb
-badd +1 app/views/layouts/admin.html.erb
-badd +13 app/assets/stylesheets/application.css
-badd +6 app/views/galleries/show.html.erb
-badd +6 app/controllers/galleries_controller.rb
-badd +23 app/views/galleries/index.html.erb
-badd +6 config/routes.rb
-badd +1 app/assets/stylesheets/admin.css
-badd +1 app/views/layouts/application.html.erb
+badd +11 app/views/images/show.html.erb
+badd +22 app/views/galleries/show.html.erb
+badd +1 app/views/images/new.html.erb
+badd +3 app/views/galleries/new.html.erb
+badd +30 app/controllers/images_controller.rb
+badd +14 app/views/images/_form.html.erb
+badd +1 app/views/galleries/_form.html.erb
+badd +7 config/routes.rb
+badd +15 app/controllers/galleries_controller.rb
+badd +1 app/views/images/edit.html.erb
+badd +3 app/views/galleries/edit.html.erb
+badd +19 app/views/galleries/index.html.erb
+badd +1 app/views/images/new
+badd +4 app/models/gallery.rb
+badd +2 app/models/image.rb
+badd +29 app/views/layouts/admin.html.erb
+badd +0 app/views/application/_error_messages.html.erb
 silent! argdel *
-edit app/views/layouts/admin.html.erb
+edit app/views/galleries/new.html.erb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -281,137 +288,24 @@ split
 1wincmd k
 wincmd w
 wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 wincmd t
 set winheight=1 winwidth=1
 exe '1resize ' . ((&lines * 18 + 19) / 39)
-exe 'vert 1resize ' . ((&columns * 71 + 71) / 143)
+exe 'vert 1resize ' . ((&columns * 65 + 71) / 143)
 exe '2resize ' . ((&lines * 18 + 19) / 39)
-exe 'vert 2resize ' . ((&columns * 71 + 71) / 143)
-exe 'vert 3resize ' . ((&columns * 71 + 71) / 143)
+exe 'vert 2resize ' . ((&columns * 65 + 71) / 143)
+exe '3resize ' . ((&lines * 18 + 19) / 39)
+exe 'vert 3resize ' . ((&columns * 77 + 71) / 143)
+exe '4resize ' . ((&lines * 18 + 19) / 39)
+exe 'vert 4resize ' . ((&columns * 77 + 71) / 143)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>62_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-nmap <buffer> gf <Plug>RailsTabFind
-nmap <buffer> f <Plug>RailsSplitFind
-nmap <buffer> gf <Plug>RailsFind
-imap <buffer>  <Plug>SparkupExecute
-imap <buffer>  <Plug>SparkupNext
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal autoindent
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-set colorcolumn=+1
-setlocal colorcolumn=+1
-setlocal comments=:#
-setlocal commentstring=<%#%s%>
-setlocal complete=.,w,b,u,t,i
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'eruby'
-setlocal filetype=eruby
-endif
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
-setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
-setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetErubyIndent()
-setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=ri
-setlocal nolinebreak
-setlocal nolisp
-set list
-setlocal list
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-set number
-setlocal number
-set numberwidth=5
-setlocal numberwidth=5
-setlocal omnifunc=rubycomplete#Complete
-setlocal path=~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/admin,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/v
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal noscrollbind
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=/Users/chenhuang/.vim-spell-en.utf-8.add
-setlocal spellfile=~/.vim-spell-en.utf-8.add
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.rb
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'eruby'
-setlocal syntax=eruby
-endif
-setlocal tabstop=2
-setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/ta
-setlocal textwidth=80
-setlocal thesaurus=
-setlocal noundofile
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 26 - ((17 * winheight(0) + 9) / 18)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-26
-normal! 06l
-lcd ~/Desktop/ROR/rails-app/pixtr
-wincmd w
-argglobal
-edit ~/Desktop/ROR/rails-app/pixtr/app/views/galleries/index.html.erb
-let s:cpo_save=&cpo
-set cpo&vim
-cnoremap <buffer> <SNR>73_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>61_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>62_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>72_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> gf <Plug>RailsFind
@@ -508,7 +402,7 @@ if &syntax != 'eruby'
 setlocal syntax=eruby
 endif
 setlocal tabstop=2
-setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/ta
+setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/ta
 setlocal textwidth=80
 setlocal thesaurus=
 setlocal noundofile
@@ -517,24 +411,26 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 24 - ((17 * winheight(0) + 9) / 18)
+let s:l = 1 - ((0 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
-normal! 0
-lcd ~/Desktop/ROR/rails-app/pixtr
+1
+normal! 023l
 wincmd w
 argglobal
-edit ~/Desktop/ROR/rails-app/pixtr/app/assets/stylesheets/admin.css
+edit app/views/galleries/_form.html.erb
 let s:cpo_save=&cpo
 set cpo&vim
+cnoremap <buffer> <SNR>72_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> gf <Plug>RailsFind
+imap <buffer>  <Plug>SparkupExecute
+imap <buffer>  <Plug>SparkupNext
 let &cpo=s:cpo_save
 unlet s:cpo_save
-setlocal noautoindent
+setlocal autoindent
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -545,8 +441,8 @@ setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 set colorcolumn=+1
 setlocal colorcolumn=+1
-setlocal comments=s1:/*,mb:*,ex:*/
-setlocal commentstring=/*%s*/
+setlocal comments=:#
+setlocal commentstring=<%#%s%>
 setlocal complete=.,w,b,u,t,i
 setlocal completefunc=
 setlocal nocopyindent
@@ -560,8 +456,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'css'
-setlocal filetype=css
+if &filetype != 'eruby'
+setlocal filetype=eruby
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -579,19 +475,19 @@ setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=0
-setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=
+setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
 setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetCSSIndent()
-setlocal indentkeys=0{,0},!^F,o,O
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,-
-setlocal keywordprg=
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=ri
 setlocal nolinebreak
 setlocal nolisp
 set list
 setlocal list
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=octal,hex
@@ -599,8 +495,8 @@ set number
 setlocal number
 set numberwidth=5
 setlocal numberwidth=5
-setlocal omnifunc=csscomplete#CompleteCSS
-setlocal path=.,~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/admin,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/include,
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/galleries,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ru
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -619,11 +515,11 @@ setlocal statusline=
 setlocal suffixesadd=.rb
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'css'
-setlocal syntax=css
+if &syntax != 'eruby'
+setlocal syntax=eruby
 endif
 setlocal tabstop=2
-setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags
+setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/ta
 setlocal textwidth=80
 setlocal thesaurus=
 setlocal noundofile
@@ -632,20 +528,253 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 18 - ((13 * winheight(0) + 18) / 37)
+let s:l = 4 - ((3 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-18
-normal! 0
-lcd ~/Desktop/ROR/rails-app/pixtr
+4
+normal! 06l
 wincmd w
-2wincmd w
+argglobal
+edit app/views/galleries/edit.html.erb
+let s:cpo_save=&cpo
+set cpo&vim
+cnoremap <buffer> <SNR>72_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nmap <buffer> gf <Plug>RailsFind
+imap <buffer>  <Plug>SparkupExecute
+imap <buffer>  <Plug>SparkupNext
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal autoindent
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+set colorcolumn=+1
+setlocal colorcolumn=+1
+setlocal comments=:#
+setlocal commentstring=<%#%s%>
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'eruby'
+setlocal filetype=eruby
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=ri
+setlocal nolinebreak
+setlocal nolisp
+set list
+setlocal list
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+set numberwidth=5
+setlocal numberwidth=5
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=~/Desktop/ROR/rails-app/pixtr/lib,~/Desktop/ROR/rails-app/pixtr/vendor,~/Desktop/ROR/rails-app/pixtr/app/models/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers/concerns,~/Desktop/ROR/rails-app/pixtr/app/controllers,~/Desktop/ROR/rails-app/pixtr/app/helpers,~/Desktop/ROR/rails-app/pixtr/app/mailers,~/Desktop/ROR/rails-app/pixtr/app/models,~/Desktop/ROR/rails-app/pixtr/app/*,~/Desktop/ROR/rails-app/pixtr/app/views,~/Desktop/ROR/rails-app/pixtr/app/views/galleries,~/Desktop/ROR/rails-app/pixtr/public,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/plugins/*/test,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/lib,~/Desktop/ROR/rails-app/pixtr/vendor/rails/*/test,~/Desktop/ROR/rails-app/pixtr,/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ru
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=/Users/chenhuang/.vim-spell-en.utf-8.add
+setlocal spellfile=~/.vim-spell-en.utf-8.add
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.rb
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'eruby'
+setlocal syntax=eruby
+endif
+setlocal tabstop=2
+setlocal tags=~/Desktop/ROR/rails-app/pixtr/tags,~/Desktop/ROR/rails-app/pixtr/tmp/tags,./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/ta
+setlocal textwidth=80
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 9) / 18)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 025l
+wincmd w
+argglobal
+edit app/views/application/_error_messages.html.erb
+let s:cpo_save=&cpo
+set cpo&vim
+cnoremap <buffer> <SNR>72_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+imap <buffer>  <Plug>SparkupExecute
+imap <buffer>  <Plug>SparkupNext
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal autoindent
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+set colorcolumn=+1
+setlocal colorcolumn=+1
+setlocal comments=:#
+setlocal commentstring=<%#%s%>
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'eruby'
+setlocal filetype=eruby
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
+setlocal includeexpr=substitute(substitute(v:fname,'::','/','g'),'$','.rb','')
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=ri
+setlocal nolinebreak
+setlocal nolisp
+set list
+setlocal list
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+set numberwidth=5
+setlocal numberwidth=5
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=/usr/local/Cellar/rbenv-gem-rehash/1.0.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/arel-5.0.1.20140414130214/lib,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/builde
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=/Users/chenhuang/.vim-spell-en.utf-8.add
+setlocal spellfile=~/.vim-spell-en.utf-8.add
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.rb
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'eruby'
+setlocal syntax=eruby
+endif
+setlocal tabstop=2
+setlocal tags=./tags,tags,/usr/local/Cellar/rbenv-gem-rehash/1.0.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/2.1.0/x86_64-darwin13.0/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionmailer-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionview-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activemodel-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.6/tags,~/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/arel-5.0.1.20140414130
+setlocal textwidth=80
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 9) / 18)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 0
+wincmd w
+3wincmd w
 exe '1resize ' . ((&lines * 18 + 19) / 39)
-exe 'vert 1resize ' . ((&columns * 71 + 71) / 143)
+exe 'vert 1resize ' . ((&columns * 65 + 71) / 143)
 exe '2resize ' . ((&lines * 18 + 19) / 39)
-exe 'vert 2resize ' . ((&columns * 71 + 71) / 143)
-exe 'vert 3resize ' . ((&columns * 71 + 71) / 143)
+exe 'vert 2resize ' . ((&columns * 65 + 71) / 143)
+exe '3resize ' . ((&lines * 18 + 19) / 39)
+exe 'vert 3resize ' . ((&columns * 77 + 71) / 143)
+exe '4resize ' . ((&lines * 18 + 19) / 39)
+exe 'vert 4resize ' . ((&columns * 77 + 71) / 143)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

@@ -1,4 +1,5 @@
-<!-- form would submit to "/galleries" due to "Gallery.new" -->
+<%= render "error_messages", target: gallery %>
+
 <%= form_for gallery do |form| %>
   <div>
     <%= form.label :name %>
@@ -10,7 +11,7 @@
     <%= form.text_field :description %>
   </div>
 
-  <div>
+  <div class="submit-buttom">
     <%= form.submit %>
   </div>
 <% end %>
