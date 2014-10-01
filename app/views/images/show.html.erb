@@ -7,7 +7,7 @@
     <th>Gallery ID</th>
   </tr>
   <tr>
-    <td><%= @image.name %></td>
+    <td><%= @image.name.capitalize %></td>
     <td class="gallery_images"><%= image_tag @image.url %></td>
     <td><%= @image.gallery_id %></td>
     <td><%= link_to "Edit", edit_gallery_image_path(@gallery, @image) %></td>
