@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'images/show'
 
   root "galleries#index"
 
   resources :galleries do
-    resources :images, only: [:show]
+    resources :images, only: [:show, :new]
   end
 
   # get "/" => "galleries#index"

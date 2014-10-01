@@ -1,0 +1,27 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 1000px;
+  background-color: #F2F2F2;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 20%;
+}
+
+div.main {
+  /* background-image: url("background.jpg"); */
+}
+
+table, th, td {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 1px #888888;
+  text-align: center;
+}
+
+.gallery_images img {
+  max-width: 100%;
+}

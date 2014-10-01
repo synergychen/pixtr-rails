@@ -3,11 +3,13 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th>Number of Images</th>
   </tr>
   <% @galleries.each do |gallery| %>
     <tr>
       <td><%= gallery.name %></td>
       <td><%= gallery.description %></td>
+      <td><%= gallery.images.count %></td>
       <td><%= link_to "Show", gallery_path(gallery) %></td>
       <td><%= link_to "Edit", edit_gallery_path(gallery) %></td>
       <td>

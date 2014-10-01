@@ -3,14 +3,18 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Url</th>
+    <th>url</th>
     <th>Gallery ID</th>
   </tr>
   <% @gallery.images.each do |image| %>
     <tr>
-      <td><%= link_to image.name, "/galleries/#{@gallery.id}/images/#{image.id}" %></td>
+      <td><%= link_to image.name, gallery_image_path(@gallery, image) %></td>
       <td><%= link_to "View Image", image.url %></td>
       <td><%= image.gallery_id %></td>
     </tr>
   <% end %>
 </table>
+
+<hr />
+
+<%= link_to "Create a new image", new_gallery_image_path(@gallery) %>
