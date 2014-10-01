@@ -11,7 +11,12 @@
     <td class="gallery_images"><%= image_tag @image.url %></td>
     <td><%= @image.gallery_id %></td>
     <td><%= link_to "Edit", edit_gallery_image_path(@gallery, @image) %></td>
+    <td>
+      <%= form_for [@gallery, @image], method: :delete  do |form| %>
+        <%= form.submit "Delete Image" %>
+      <% end %>
+    </td>
   </tr>
 </table>
 
-<%= link_to ">> Back to see more #{@gallery.name}", "/galleries/#{@gallery.id}" %>
+<%= link_to ">> Back to see more #{@gallery.name}", gallery_path(@gallery) %>

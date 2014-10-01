@@ -3,16 +3,23 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>url</th>
+    <th>Image List</th>
     <th>Gallery Name</th>
     <th>Gallery ID</th>
   </tr>
   <% @gallery.images.each do |image| %>
     <tr>
-      <td><%= link_to image.name, gallery_image_path(@gallery, image) %></td>
-      <td><%= link_to "View Image", image.url %></td>
+      <td><%= image.name.capitalize %></td>
+      <td class="gallery_image_list"><%= image_tag image.url %></td>
       <td><%= @gallery.name %></td>
       <td><%= image.gallery_id %></td>
+      <td><%= link_to "Show", gallery_image_path(@gallery, image) %></td>
+      <td><%= link_to "Edit", edit_gallery_image_path(@gallery, image) %></td>
+      <td>
+        <%= form_for [@gallery, image], method: :delete  do |form| %>
+          <%= form.submit "Delete Image" %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

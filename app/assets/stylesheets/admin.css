@@ -71,3 +71,8 @@ td {
 .gallery_images img {
   max-width: 100%;
 }
+
+.gallery_image_list img {
+  height: auto;
+  width: 150px;
+}
