@@ -4,12 +4,14 @@
   <tr>
     <th>Name</th>
     <th>url</th>
+    <th>Gallery Name</th>
     <th>Gallery ID</th>
   </tr>
   <% @gallery.images.each do |image| %>
     <tr>
       <td><%= link_to image.name, gallery_image_path(@gallery, image) %></td>
       <td><%= link_to "View Image", image.url %></td>
+      <td><%= @gallery.name %></td>
       <td><%= image.gallery_id %></td>
     </tr>
   <% end %>
