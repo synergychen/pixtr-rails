@@ -27,7 +27,17 @@
     <div class="body">
 
       <div class="main">
-        <%= yield %>
+        <div class="flash-message">
+          <% flash.each do |name, msg| %>
+            <% if msg.is_a?(String) %>
+              <%= content_tag :div, msg, :class => "flash_#{name}" %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="main-content">
+          <%= yield %>
+        </div>
       </div>
 
       <div class="footer">

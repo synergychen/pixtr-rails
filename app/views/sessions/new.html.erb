@@ -1,13 +1,17 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
-    <%= form.submit "Sign in" %>
-  </div>
-<% end %>
+<h3 class="header-new-edit">Sign In</h3>
+
+<div class="form-new-edit">
+  <%= form_for :session, url: session_path do |form| %>
+    <div>
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+    </div>
+    <div>
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
+    <div class="submit-buttom">
+      <%= form.submit "Sign in" %>
+    </div>
+  <% end %>
+</div>

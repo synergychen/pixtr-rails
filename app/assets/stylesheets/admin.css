@@ -42,8 +42,7 @@
 /* ========== */
 .body {
   font-family: Helvetica, arial, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
-  padding-left: 15em;
-  padding-right: 15em;
+  padding: 1em 15em 2em 15em;
   /* background-image: url("background.jpg"); */
 }
 
@@ -51,6 +50,10 @@
   margin-bottom: 1em;
   padding-left: 2em;
   padding-right: 2em;
+}
+
+.flash-message {
+  text-align: center;
 }
 
 .footer {
