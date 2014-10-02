@@ -1,17 +1,15 @@
 class GalleriesController < ApplicationController
 
-  layout "admin"
-
   def index
-    @galleries = Gallery.all
+    @galleries = current_user.galleries.all
   end
 
   def new
-    @gallery = Gallery.new
+    @gallery = current_user.galleries.new
   end
 
   def create
-    @gallery = Gallery.new(gallery_params)
+    @gallery = current_user.galleries.new(gallery_params)
     if @gallery.save
       redirect_to gallery_path(@gallery)
     else
@@ -20,15 +18,15 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = load_gallery_from_url
   end
 
   def edit
-    @gallery = Gallery.find(params[:id])
+    @gallery = load_gallery_from_url
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
+    @gallery = load_gallery_from_url
 
     if @gallery.update(gallery_params)
       redirect_to root_path
@@ -38,11 +36,15 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-    Gallery.find(params[:id]).destroy
+    load_gallery_from_url.destroy
     redirect_to "/"
   end
 
   private
+
+  def load_gallery_from_url
+    current_user.galleries.find(params[:id])
+  end
 
   def gallery_params
     params.require(:gallery).permit(:name, :description)
