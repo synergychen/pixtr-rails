@@ -12,13 +12,15 @@
       <div class="header-container">
         <span class="header-logo"><%= image_tag "logo.png" %></span>
         <span class="header-title"><%= link_to "Pixtr", root_path %></span>
-        <span class="signup-login"><%= link_to "Sign up", new_user_path %></span>
-        <!-- <div class="header&#45;nav&#45;link"> -->
-        <!--   <ul> -->
-        <!--     <li>Gallery</li> -->
-        <!--     <li>Image</li> -->
-        <!--   </ul> -->
-        <!-- </div> -->
+        <span class="signup-login">
+          <% if signed_in? %>
+            <%= link_to "Sign out", session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign up", new_user_path %>
+            |
+            <%= link_to "Sign in", new_session_path %>
+          <% end %>
+        </span>
       </div>
     </div>
 
