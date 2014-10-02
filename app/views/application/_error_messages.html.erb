@@ -1,10 +1,9 @@
 <div class="error-messages">
   <% if target.errors.any? %>
-    <h2><%= pluralize(target.errors.count, "error")  %> found : </h2>
-
+    <%= pluralize(target.errors.count, "error") %> prevented your account from being created:
     <ul>
-      <% target.errors.full_messages.each do |message| %>
-        <li>- <%= message %></li>
+      <% target.errors.full_messages.each do |error_message| %>
+        <li>- <%= error_message %></li>
       <% end %>
     </ul>
   <% end %>
