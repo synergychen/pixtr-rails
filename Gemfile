@@ -5,6 +5,7 @@ gem 'pry', group: :development
 
 gem 'monban'
 gem 'monban-generators'
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
