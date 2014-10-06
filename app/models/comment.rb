@@ -6,4 +6,8 @@ class Comment < ActiveRecord::Base
   def self.recent
     order("created_at DESC").limit(5)
   end
+
+  def self.with_word
+    where("body ILIKE '%recent%'")
+  end
 end

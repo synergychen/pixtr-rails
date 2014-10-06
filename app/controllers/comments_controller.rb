@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to gallery_image_path(@gallery, @image)
     else
-      @comments = @image.comments.recent
+      @comments = @image.comments.with_word.recent
       render "images/show"
     end
   end
