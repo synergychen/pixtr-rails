@@ -168,3 +168,49 @@ label + input {
 .error-messages ul {
   list-style-type: none;
 }
+
+/* ================== */
+/* comments on images */
+/* ================== */
+.comment-outer-box {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #E5F2F7;
+  border-radius: 5px;
+  border: 1px solid #99CDE1;
+}
+
+.comment-inner-box {
+  margin: 15px;
+  background-color: #E5F2F7;
+  border-radius: 5px;
+}
+
+.comment-form {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #888888;
+  border: white;
+}
+
+.comment-text {
+  width: auto;
+  height: 80px;
+  vertical-align: top;
+  overflow: hidden;
+  text-shadow: none;
+}
+
+textarea#comment_body {
+  width: 99%;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: white;
+}
+
+.comment-submit {
+  margin: 0 auto;
+  float: right;
+}

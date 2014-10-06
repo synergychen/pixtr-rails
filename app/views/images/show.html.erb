@@ -20,3 +20,32 @@
 </table>
 
 <%= link_to ">> Back to see more #{@gallery.name}", gallery_path(@gallery) %>
+
+<hr />
+
+<ul>
+  <%# <% @comments.each do |comment| would fail %>
+  <% @image.comments.each do |comment| %>
+    <li>
+      <%= comment.user.email %> - <%= comment.body %>
+    </li>
+  <% end %>
+</ul>
+
+<hr />
+
+<%= render "error_messages", target: @comment %>
+
+<div class="comment-outer-box">
+  <div class="comment-inner-box">
+    <%= form_for [@image, @comment], class: "comment-form" do |form| %>
+      <div class="comment-text">
+        <%= form.text_area :body, class: ", class: """ %>
+      </div>
+      <div class="comment-submit">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

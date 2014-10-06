@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :images, only: [:show, :new, :create, :edit, :update, :destroy]
   end
 
+  resources :images, only: [] do
+    resources :comments, only: [:create]
+  end
+
   # get "/" => "galleries#index"
   #
   # get "/galleries/new" => "galleries#new"
