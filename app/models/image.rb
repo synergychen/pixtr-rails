@@ -4,4 +4,8 @@ class Image < ActiveRecord::Base
 
   validates :name, presence: true
   validates :url, presence: true
+
+  def self.recent
+    order("created_at DESC").limit(5)
+  end
 end
