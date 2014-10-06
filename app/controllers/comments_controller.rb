@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to gallery_image_path(@gallery, @image)
     else
+      @comments = @image.comments.all
       render "images/show"
     end
   end
