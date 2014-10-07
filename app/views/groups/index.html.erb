@@ -7,6 +7,8 @@
     <tr>
       <td><%= group.name %></td>
       <td><%= group.description %></td>
+      <td><%= link_to "Show", group_path(group) %></td>
+      <td><%= link_to "Edit", edit_group_path(group) %></td>
     </tr>
   <% end %>
 </table>

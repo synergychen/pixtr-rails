@@ -1,0 +1,21 @@
+<h3 class="header-new-edit">Edit Group "<%= @group.name %>"</h3>
+
+<%= render "error_messages", target: @group %>
+
+<div class="form-new-edit">
+  <%= form_for @group do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field:name %>
+    </div>
+
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+
+    <div class="submit-buttom">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
