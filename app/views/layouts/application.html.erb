@@ -14,6 +14,8 @@
         <span class="header-title"><%= link_to "Pixtr", root_path %></span>
         <span class="signup-login">
           <% if signed_in? %>
+            <%= link_to "Groups", groups_path %>
+            <%= link_to "Galleries", galleries_path %>
             <%= link_to "Sign out", session_path, method: :delete %>
           <% else %>
             <%= link_to "Sign up", new_user_path %>
