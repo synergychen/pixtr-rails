@@ -1,1 +1,12 @@
-hello
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+  </tr>
+  <% @groups.each do |group| %>
+    <tr>
+      <td><%= group.name %></td>
+      <td><%= group.description %></td>
+    </tr>
+  <% end %>
+</table>
