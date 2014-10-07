@@ -1,10 +1,14 @@
+<h3>Show Group Members "<%= @group.name %>"</h3>
+
 <table>
   <tr>
-    <td>Name</td>
-    <td>Description</td>
+    <td>Member ID</td>
+    <td>Member Email</td>
   </tr>
-  <tr>
-    <td><%= @group.name %></td>
-    <td><%= @group.description %></td>
-  </tr>
+  <% @members.each do |member| %>
+    <tr>
+      <td><%= member.id %></td>
+      <td><%= member.email %></td>
+    </tr>
+  <% end %>
 </table>
