@@ -19,7 +19,7 @@
     <td>
       <% if current_user.likes?(@image) %>
       <% else %>
-        <%= button_to "Like", image_likes_path(@image) %>
+        <%= button_to "Like", image_like_path(@image) %>
       <% end %>
     </td>
   </tr>
