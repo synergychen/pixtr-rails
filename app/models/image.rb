@@ -5,6 +5,9 @@ class Image < ActiveRecord::Base
   has_many :group_memberships
   has_many :members, through: :group_membership
 
+  has_many :likes
+  has_many :likers, through: :likes, source: :user
+
   validates :name, presence: true
   validates :url, presence: true
 

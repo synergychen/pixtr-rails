@@ -5,6 +5,11 @@
     <th>Name</th>
     <th>Image (<%= link_to "Source", @image.url %>)</th>
     <th>Gallery ID</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>Who Likes</th>
   </tr>
   <tr>
     <td><%= @image.name.capitalize %></td>
@@ -18,15 +23,22 @@
     </td>
     <td>
       <% if current_user.likes?(@image) %>
-        <%= button_to "Dislike", image_like_path(@image), method: :delete %>
+        <%= button_to "Unlike", image_like_path(@image), method: :delete %>
       <% else %>
         <%= button_to "Like", image_like_path(@image) %>
       <% end %>
     </td>
+    <td><%= @image.likes.count %></td>
+    <td>
+      <% @image.likers.each do |liker| %>
+        <%= liker.email %><hr />
+      <% end %>
+      <%# <% @image.likes.each do |like| %>
+      <%#   <%= like.user.email %>
+      <%# <% end %>
+    </td>
   </tr>
 </table>
-
-<%= link_to ">> Back to see more #{@gallery.name}", gallery_path(@gallery) %>
 
 <hr />
 

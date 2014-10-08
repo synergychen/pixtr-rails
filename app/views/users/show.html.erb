@@ -1,0 +1,9 @@
+<table>
+  <tr>
+    <% @user.likes.each do |like| %>
+      <td class="gallery-images">
+        <%= image_tag like.image.url %>
+      </td>
+    <% end %>
+  </tr>
+</table>
