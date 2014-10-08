@@ -18,6 +18,7 @@
     </td>
     <td>
       <% if current_user.likes?(@image) %>
+        <%= button_to "Dislike", image_like_path(@image), method: :delete %>
       <% else %>
         <%= button_to "Like", image_like_path(@image) %>
       <% end %>
