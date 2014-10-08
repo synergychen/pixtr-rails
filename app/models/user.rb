@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     # Like.create(user_id: id, image_id: image.id)
     # Like.create(user_id: self.id, image_id: image.id)
   end
+
+  def likes?(image)
+    liked_images.include?(image)
+  end
 end
