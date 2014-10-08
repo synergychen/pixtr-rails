@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   has_many :group_memberships, foreign_key: "member_id"
   has_many :groups, through: :group_memberships
 
+  has_many :likes
+  has_many :liked_images, through: :likes, source: :image
+
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
 
@@ -12,7 +15,8 @@ class User < ActiveRecord::Base
   end
 
   def like(image)
-    Like.create(user_id: id, image_id: image.id)
+    liked_images << image
+    # Like.create(user_id: id, image_id: image.id)
     # Like.create(user_id: self.id, image_id: image.id)
   end
 end
