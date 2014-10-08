@@ -9,6 +9,13 @@
       <td><%= group.description %></td>
       <td><%= link_to "Show", group_path(group) %></td>
       <td><%= link_to "Edit", edit_group_path(group) %></td>
+      <td>
+        <% if group.members.include? current_user %>
+          <%= button_to "Leave", group_group_membership_path(group, current_user.membership_for(group)), method: :delete %>
+        <% else %>
+          <%= button_to "Join", group_group_memberships_path(group) %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>
