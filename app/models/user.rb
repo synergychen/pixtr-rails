@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
   def membership_for(group)
     self.group_memberships.where(group_id: group.id).first
   end
+
+  def like(image)
+    Like.create(user_id: id, image_id: image.id)
+    # Like.create(user_id: self.id, image_id: image.id)
+  end
 end
