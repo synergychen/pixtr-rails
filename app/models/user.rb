@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
     # Like.create(user_id: self.id, image_id: image.id)
   end
 
+  def unlike(image)
+    liked_images.destroy(image)
+  end
+
   def likes?(image)
     liked_images.include?(image)
   end
