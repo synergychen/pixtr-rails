@@ -11,6 +11,10 @@
     <%= form.text_field :url%>
   </div>
 
+  <div>
+    <%= form.collection_check_boxes(:tag_ids, @available_tags, :id, :name) %>
+  </div>
+
   <div class="submit-buttom">
     <%= form.submit %>
   </div>

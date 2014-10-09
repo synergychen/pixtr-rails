@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
   def new
     @gallery = load_gallery_from_url
     @image = @gallery.images.new
+    @available_tags = Tag.all
   end
 
   def create
@@ -27,6 +28,7 @@ class ImagesController < ApplicationController
   def edit
     @gallery = load_gallery_from_url
     @image = @gallery.images.find(params[:id])
+    @available_tags = Tag.all
   end
 
   def update
