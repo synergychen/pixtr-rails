@@ -28,4 +28,10 @@ class Image < ActiveRecord::Base
   def tag_words
     tags.pluck(:name).join(", ")
   end
+
+  def tag_words=(tag_string)
+    words = tag_string.split(', ')
+    ids = words.map { |word| Tag.find_or_create_by(name: word).id}
+    self.tag_ids = ids
+  end
 end

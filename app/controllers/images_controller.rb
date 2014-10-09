@@ -7,6 +7,7 @@ class ImagesController < ApplicationController
     @available_tags = Tag.all
     @comments = @image.comments.with_word.recent
     @comment = Comment.new
+    @number_of_tags = Tag.count
   end
 
   def new
@@ -55,6 +56,6 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-    params.require(:image).permit(:name, :url, group_ids: [], tag_ids: [])
+    params.require(:image).permit(:name, :url, :tag_words, group_ids: [], tag_ids: [])
   end
 end

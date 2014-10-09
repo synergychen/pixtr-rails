@@ -49,8 +49,10 @@
   <% end %>
 <% end %>
 
+<p>Number of Tags: <%= @number_of_tags %></p>
+
 <%= form_for [@image.gallery, @image] do |form| %>
-  <%= form.collection_check_boxes(:tag_ids, @available_tags, :id, :name) %>
+  <%= form.text_field :tag_words %>
   <%= form.submit "Update Tags" %>
 <% end %>
 
