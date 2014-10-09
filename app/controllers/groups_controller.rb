@@ -19,6 +19,7 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @members = @group.members
+    @images = @group.images
   end
 
   def edit
@@ -40,3 +41,4 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, :description)
   end
 end
+

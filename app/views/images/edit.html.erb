@@ -3,3 +3,8 @@
 <div class="form-new-edit">
   <%= render "form", {gallery: @gallery, image: @image} %>
 </div>
+
+<%= form_for @image do |form| %>
+  <%= form.collection_check_boxes(:group_ids, Group.all, :id, :name) %>
+  <%= form.submit "Grouping Image" %>
+<% end %>

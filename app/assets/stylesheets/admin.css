@@ -117,30 +117,30 @@ form {
   width: 100%;
 }
 
-/* label and input text */
-label, input {
-  margin: 3px 0 3px 0;
-  display: inline-block;
-}
-
-label {
-  width: 30%;
-  text-align: right;
-}
-
-/* input text */
-label + input {
-  width: 40%;
-  height: 1.5em;
-  text-align: center;
-}
-
-/* submit bottom */
-.submit-buttom {
-  width: 45%;
-  text-align: right;
-  margin: 0 auto;
-}
+/* /* label and input text */ */
+/* label, input { */
+/*   margin: 3px 0 3px 0; */
+/*   display: inline-block; */
+/* } */
+/*  */
+/* label { */
+/*   width: 30%; */
+/*   text-align: right; */
+/* } */
+/*  */
+/* /* input text */ */
+/* label + input { */
+/*   width: 40%; */
+/*   height: 1.5em; */
+/*   text-align: center; */
+/* } */
+/*  */
+/* /* submit bottom */ */
+/* .submit-buttom { */
+/*   width: 45%; */
+/*   text-align: right; */
+/*   margin: 0 auto; */
+/* } */
 
 /* images */
 .gallery_images img {
