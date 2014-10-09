@@ -9,6 +9,7 @@ class TagsController < ApplicationController
     if @tag.save
       redirect_to tags_path
     else
+      @tags = Tag.all
       render :index
     end
   end
