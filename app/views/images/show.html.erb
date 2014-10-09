@@ -44,12 +44,15 @@
 
 <% if current_user == @image.gallery.user %>
   <%= form_for [@image.gallery, @image] do |form| %>
-    <%= form.collection_check_boxes(:group_ids, Group.all, :id, :name) %>
+    <%= form.collection_check_boxes(:group_ids, @available_groups, :id, :name) %>
     <%= form.submit "Add to groups" %>
   <% end %>
 <% end %>
 
-<p>Tags: <%= @image.tag_words %></p>
+<%= form_for [@image.gallery, @image] do |form| %>
+  <%= form.collection_check_boxes(:tag_ids, @available_tags, :id, :name) %>
+  <%= form.submit "Update Tags" %>
+<% end %>
 
 <table>
   <tr>

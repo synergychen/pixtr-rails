@@ -3,6 +3,8 @@ class ImagesController < ApplicationController
   def show
     @gallery = Gallery.find(params[:gallery_id])
     @image = @gallery.images.find(params[:id])
+    @available_groups = Group.all
+    @available_tags = Tag.all
     @comments = @image.comments.with_word.recent
     @comment = Comment.new
   end
@@ -51,6 +53,6 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-    params.require(:image).permit(:name, :url, group_ids: [])
+    params.require(:image).permit(:name, :url, group_ids: [], tag_ids: [])
   end
 end
